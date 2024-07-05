@@ -441,5 +441,87 @@ public class Main {
                 System.out.println(bv);
             }
         }
+        myMethod();
+        myMethod();
+        myMethod();
+        myName("Liam", 3);
+        myName("Jenny", 42);
+        myName("Anja", 23);
+        checkAge(20);
+        checkAge(5);
+        checkAge(50);
+        System.out.println(myCalc(3));
+        System.out.println(myCalc(8));
+        System.out.println(myCalc2(5, 5));
+        int calz = myCalc2(9, 9);
+        System.out.println(calz);
+        int myNum1o = plusMethodInt(8, 5);
+        double myNum2o = plusMethodDouble(4.3, 6.26);
+        System.out.println("int: " + myNum1o);
+        System.out.println("double: " + myNum2o);
+        int myNum1i = plusMethod(8, 5);
+        double myNum2i = plusMethod(4.3, 6.26);
+        System.out.println("int: " + myNum1i);
+        System.out.println("double: " + myNum2i);
+        int resultp = sum5(10);
+        System.out.println(resultp);
+        int re = sum9(8, 23);
+        System.out.println(re);
+    }
+
+    static void myMethod() {
+        System.out.println("I just got executed!");    
+    }
+
+    static void myName(String fname, int age) {
+        System.out.println(fname + " Refsnes, is age: " + age);
+    }
+
+    static void checkAge(int age) {
+        if (age < 18) {
+            System.out.println("Acces denied - You are not old enough!");
+        } else {
+            System.out.println("Acces granted - You are old enough!");
+        }
+    }
+
+    static int myCalc(int x) {
+        return 5 + x;
+    }
+
+    static int myCalc2(int x, int y) {
+        return x + y;
+    }
+
+    static int plusMethodInt(int x, int y) {
+        return x + y;
+    }
+
+    static double plusMethodDouble(double x, double y) {
+        return x + y;
+    }
+
+    static int plusMethod(int x, int y) {
+        return x + y;
+    }
+
+    static double plusMethod(double x, double y) {
+        return x + y;
+    }
+
+    public static int sum5(int k) {
+        if (k > 0) {
+            return k + sum5(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    public static int sum9(int start, int end) {
+        if (end > start) {
+            return end + sum9(start, end -1);
+        } else {
+            return end;
+        }
     }
 }
